@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Metro.UI.CSS</id>
+    <version>3.0.17</version>
+    <title>Metro UI CSS</title>
+    <authors>Sergey Pimenov</authors>
+    <owners>Sergey Pimenov</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://metroui.org.ua/license.html</licenseUrl>
+    <projectUrl>http://metroui.org.ua/</projectUrl>
+    <description>Metro UI CSS a set of styles to create a site with an interface similar to Windows 8</description>
+    <releaseNotes>fix hotkeys init</releaseNotes>
+    <copyright>Copyright 2012-2017, Sergey Pimenov</copyright>
+    <language>en-US</language>
+    <tags>Windows Metro UI CSS Framework LESS</tags>
+  </metadata>
+  <files>
+    <file src="Content\Content\metro-colors.css" target="Content\Content\metro-colors.css" />
+    <file src="Content\Content\metro-colors.min.css" target="Content\Content\metro-colors.min.css" />
+    <file src="Content\Content\metro-icons.css" target="Content\Content\metro-icons.css" />
+    <file src="Content\Content\metro-icons.min.css" target="Content\Content\metro-icons.min.css" />
+    <file src="Content\Content\metro-responsive.css" target="Content\Content\metro-responsive.css" />
+    <file src="Content\Content\metro-responsive.min.css" target="Content\Content\metro-responsive.min.css" />
+    <file src="Content\Content\metro-rtl.css" target="Content\Content\metro-rtl.css" />
+    <file src="Content\Content\metro-rtl.min.css" target="Content\Content\metro-rtl.min.css" />
+    <file src="Content\Content\metro-schemes.css" target="Content\Content\metro-schemes.css" />
+    <file src="Content\Content\metro-schemes.min.css" target="Content\Content\metro-schemes.min.css" />
+    <file src="Content\Content\metro.css" target="Content\Content\metro.css" />
+    <file src="Content\Content\metro.min.css" target="Content\Content\metro.min.css" />
+    <file src="Content\Fonts\metro.eot" target="Content\Fonts\metro.eot" />
+    <file src="Content\Fonts\metro.svg" target="Content\Fonts\metro.svg" />
+    <file src="Content\Fonts\metro.ttf" target="Content\Fonts\metro.ttf" />
+    <file src="Content\Fonts\metro.woff" target="Content\Fonts\metro.woff" />
+    <file src="Content\Fonts\selection.json" target="Content\Fonts\selection.json" />
+    <file src="Content\Scripts\metro.js" target="Content\Scripts\metro.js" />
+    <file src="Content\Scripts\metro.min.js" target="Content\Scripts\metro.min.js" />
+  </files>
+</package>

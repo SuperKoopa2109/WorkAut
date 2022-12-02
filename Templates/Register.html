@@ -1,0 +1,46 @@
+{% extends "Overlay.html" %}
+<!-- <!DOCTYPE html>-->
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WorkAut</title>
+<!-- <meta name="keywords" content="" /> -->
+<!-- <meta name="description" content="" /> -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/default.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/fonts.css') }}"/>
+</head>
+
+<body>
+{% block content %}
+<form action="register" method="POST">
+	<label style="margin-top: 0em; margin-bottom: 0em;" for="regUsername">Username:</label>
+	<input type="Text" name="regUsername" value="" style="margin-top: 0em; margin-bottom: 0em;"><br>
+	<label style="margin-top: 0em; margin-bottom: 0em;" for="regPass">Passwort:</label>
+	<input type="Password" name="regPass" value="" style="margin-top: 0em; margin-bottom: 0em;"><br>
+	<label style="margin-top: 0em; margin-bottom: 0em;" for="regPassConf">Passwort bestätigen:</label>
+	<input type="Password" name="regPassConf" value="" style="margin-top: 0em; margin-bottom: 0em;"><br><br>
+	<div style="margin-top: 0em; margin-bottom: 0em;">
+	<label style="float: left; margin: 0em 1em 0em 0em;">Gender:</label>
+	<br><br>
+	<label class="RadioClass" style="float: left;">
+	<input class="MyRadio" id="rad1" type="radio" name="gender" value="1" style="float: left;" checked>
+	<span class="checkmark"></span>
+	Male
+	</label>
+	<label class="RadioClass" style="float: left;">
+	Female
+	<input class="MyRadio" id="rad2" type="radio" name="gender" value="0" style="float: left;">
+	<span class="checkmark"></span>
+	</label>
+	</div>
+	<br><br><br><br>
+	<button class="button" style="width: 5em; height: 2em; float: left; font-size: 1em; margin: 1em;">Register</button>
+</form>
+{% endblock %}
+
+</body>
+
+</html>

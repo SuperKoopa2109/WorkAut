@@ -1,0 +1,32 @@
+<!-- <!DOCTYPE html>-->
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WorkAut</title>
+<!-- <meta name="keywords" content="" /> -->
+<!-- <meta name="description" content="" /> -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/default.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/fonts.css') }}"/>
+</head>
+
+<body>
+	<form action="start" method="POST">
+		<label for="Username">Username:</label>
+		<input type="Text" name="Username" value=""><br>
+		<label for="Pass">Passwort:</label>
+		<input type="Password" name="Pass" value=""><br>
+		<div style="float: left;">
+		<button class="button" name="Login" style="width: 10em; height: 3em; margin: 1em 1em 1em 1em; float: left;" value="Login">Login</button>
+		</div>
+	</form>
+<div style="float: left;">
+	<form action="form_register">
+		<button class="button" style="width: 10em; height: 3em; margin: 0.5em 0em 0em 0em;" value="Register">Register</button>
+	</form>
+</div>
+</body>
+
+</html>

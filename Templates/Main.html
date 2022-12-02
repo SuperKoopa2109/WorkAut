@@ -1,0 +1,89 @@
+{% extends "Overlay.html" %}
+<!-- <!DOCTYPE html>-->
+
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WorkAut</title>
+<!-- <meta name="keywords" content="" /> -->
+<!-- <meta name="description" content="" /> -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/default.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/fonts.css') }}"/>
+</head>
+
+<body>
+{% block content %}
+<div style="float:left; margin-top: 2em;">
+<form method="POST" id="TPCreate" action="pageart">
+	<button class="button">Trainingsplan erstellen</button>
+</form>
+
+<br>
+<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+<!-- <script> -->
+	<!-- $('#TPCreate').on('submit', function(e){ -->
+		<!-- var pageart = 'goal'; -->
+		<!-- e.preventDefault(); -->
+		<!-- $.ajax({ -->
+			<!-- url: 'http://127.0.0.1:5000/pageart', -->
+			<!-- data: {'pageart': pageart}, -->
+			<!-- method: 'POST', -->
+			<!-- }); -->
+	<!-- }); -->
+<!-- </script> -->
+<form method="POST" id="TPShow" action="TPShow">
+	<button class="button">Trainingsplan anzeigen</button>
+</form>
+</div>
+{% endblock %}
+<p id="place"></p>
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script>
+	$('#form').on('submit', function(e){
+		var zahl = $('#num').val();
+		e.preventDefault();
+		$.ajax({
+			url: 'http://127.0.0.1:5000/test',
+			data: {'zahl': zahl},
+			method: 'POST',
+			success: function(data) {
+				$('#num').val('');
+				$('#place').html('Square of ' + zahl + ' is ' + data['vari'])
+			}
+		});
+	});
+	
+</script>
+
+<!-- <h1>Square Calculator</h1> -->
+		<!-- <form method="post" id="form"> -->
+			<!-- <label for="num">Enter Number : </label> -->
+			<!-- <input type="text" id="num" name="number" autofocus autocomplete="off"> -->
+			<!-- <button>Post</button> -->
+		<!-- </form> -->
+		<!-- <p id="square"></p> -->
+		<!-- <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script> -->
+		<!-- <script> -->
+			<!-- $('#form').on('submit', function(e){ -->
+				<!-- var number = $('#num').val(); -->
+				<!-- e.preventDefault(); -->
+				<!-- $.ajax({ -->
+					<!-- url: 'http://127.0.0.1:5000/square/', -->
+					<!-- data: {'number': number}, -->
+					<!-- method: 'POST', -->
+					<!-- success: function(data) { -->
+						<!-- $('#num').val(''); -->
+						<!-- $('#square').html('Square of ' + number + ' is ' + data['square']) -->
+					<!-- } -->
+				<!-- }); -->
+			<!-- }); -->
+		<!-- </script> -->
+
+</body>
+
+
+
+</html>

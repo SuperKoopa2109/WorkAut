@@ -1,0 +1,34 @@
+{% extends "Overlay.html" %}
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>WorkAut</title>
+<!-- <meta name="keywords" content="" /> -->
+<!-- <meta name="description" content="" /> -->
+<link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" rel="stylesheet" />
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/default.css') }}"/>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/fonts.css') }}"/>
+</head>
+
+<body>
+{% block content %}
+<script>
+<!-- plans = [{{ plan }}]; -->
+<!-- for(var i = 1; i<={{ number }}; i++){ -->
+<!-- document.write("<a class='button'> " + plans[i] + " </a>"); -->
+<!-- } -->
+
+</script>
+
+{% for plan in plans %}
+<div style="float: left;">
+<form method="POST" action="SavePlans?choice={{ plan[0] }}">
+<button class="button">{{ plan[0] }}</button>
+</form>
+</div>
+{% endfor %}
+{% endblock %}
+</body>
+
+</html>
